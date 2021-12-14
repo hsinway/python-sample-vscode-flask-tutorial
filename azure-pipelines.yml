@@ -8,7 +8,7 @@ trigger:
 
 pool:
   # vmImage: ubuntu-latest
-  vmImage: Hosted Agent
+  vmImage: wesleyxins-MacBook-Pro
 
 strategy:
   matrix:
@@ -18,7 +18,7 @@ strategy:
     #   python.version: '3.5'
     # Python36:
     #   python.version: '3.6'
-    Python37:
+    Python39:
       python.version: '3.9'
 
 steps:
@@ -28,11 +28,13 @@ steps:
   displayName: 'Use Python $(python.version)'
 
 - script: |
-    python -m pip install --upgrade pip
-    pip install -r requirements.txt
+    # python -m pip install --upgrade pip
+    # pip install -r requirements.txt
+    python3 --version
   displayName: 'Install dependencies'
 
 - script: |
-    pip install pytest pytest-azurepipelines
-    pytest
+    # pip install pytest pytest-azurepipelines
+    # pytest
+    python3 --version
   displayName: 'pytest'
