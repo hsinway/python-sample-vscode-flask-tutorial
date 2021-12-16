@@ -7,8 +7,7 @@ trigger:
 - master
 
 pool:
-  # vmImage: ubuntu-latest
-  vmImage: wesleyxins-MacBook-Pro
+  vmImage: ubuntu-latest
 
 strategy:
   matrix:
